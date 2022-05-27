@@ -12,11 +12,11 @@ public class Dealership {
 
     switch (option) {
       case "a":
-        System.out.println("What is your budget?");
+        System.out.println("\nWhat is your budget?");
         int budget = scan.nextInt();
 
         if (budget >= 10000) {
-          System.out.println("Great! A Nissan Altima is available");
+          System.out.println("\nGreat! A Nissan Altima is available");
           
           scan.nextLine();
           System.out.println("\nDo you have insurance? Write 'yes' or 'no'");
@@ -27,19 +27,30 @@ public class Dealership {
           int creditScore = scan.nextInt();
 
           if (insurance.equals("yes") && license.equals("yes") && creditScore > 660) {
-            System.out.println("Sold! Pleasure doing business with you.");
+            System.out.println("\nSold! Pleasure doing business with you.");
           } else {
-            System.out.println("We're sorry. You are not eligible.");
+            System.out.println("\nWe're sorry. You are not eligible.");
           }
         } else {
-          System.out.println("We don't sell cars under $10,000. Sorry!");
+          System.out.println("\nWe don't sell cars under $10,000. Sorry!");
         }
+
         break;
       case "b":
-        System.out.println("You chose option " + option);
+        System.out.println("\nWhat is your car valued at?");
+        int value = scan.nextInt();
+        System.out.println("\nWhat is your selling price?");
+        int price = scan.nextInt();
+
+        if (value > price && price < 30000) {
+          System.out.println("\nWe will buy your car. Pleasure doing business with you.");
+        } else {
+          System.out.println("\nSorry, we're not interested!");
+        }
+
         break;
       default:
-        System.out.println("Invalid option");
+        System.out.println("\nInvalid option");
         break;
     }
 
