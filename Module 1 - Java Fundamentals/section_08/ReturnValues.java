@@ -2,41 +2,41 @@ public class ReturnValues {
   public static void main(String[] args) {
     double length1 = 4.3;
     double width1 = 2.2;
+    String option1 = "area";
     double length2 = 3.2;
     double width2 = 4.1;
-    double length3 = 3.5;
-    double width3 = 1.2;
-    double length4 = 1.6;
-    double width4 = 5.6;
-    double length5 = 10.1;
-    double width5 = 0.7;
-    double length6 = 20.2;
-    double width6 = 5.6;
+    String option2 = "perimeter";
+    double length3 = -1;
+    double width3 = 2.2;
+    String option3 = "area";
 
-    double area1 = measureRectangle(length1, width1);
-    double area2 = measureRectangle(length2, width2);
-    double area3 = measureRectangle(length3, width3);
-    double area4 = measureRectangle(length4, width4);
-    double area5 = measureRectangle(length5, width5);
-    double area6 = measureRectangle(length6, width6);
+    double measure1 = measureRectangle(length1, width1, option1);
+    double measure2 = measureRectangle(length2, width2, option2);
+    double measure3 = measureRectangle(length3, width3, option3);
 
-    areaPrinter(length1, width1, area1);
-    areaPrinter(length2, width2, area2);
-    areaPrinter(length3, width3, area3);
-    areaPrinter(length4, width4, area4);
-    areaPrinter(length5, width5, area5);
-    areaPrinter(length6, width6, area6);
+    measurePrinter(length1, width1, measure1, option1);
+    measurePrinter(length2, width2, measure2, option2);
+    measurePrinter(length3, width3, measure3, option3);
 
   }
 
-  public static double measureRectangle(double length, double width) {
-    double area = length * width;
-
-    return area;
+  public static double measureRectangle(double length, double width, String option) {
+    if (length < 0 || width < 0) {
+      System.out.println("Length or width cannot be negative!");
+      System.exit(0);
+    }
+    switch (option) {
+      case "area":
+        return length * width;
+      case "perimeter":
+        return 2 * (length + width);
+      default:
+        return 404;
+    }
   }
 
-  public static void areaPrinter(double length, double width, double area) {
-    System.out.println("The area of the rectangle with length "
-      + length + " and width " + width + " is equal to " + area + "\n");
+  public static void measurePrinter(double length, double width, double measure, String option) {
+    System.out.println("The " + option + " of the rectangle with length "
+      + length + " and width " + width + " is equal to " + measure + "\n");
   }
 }
