@@ -10,6 +10,9 @@ public class Detention {
 
  }
 
+  /**    
+    * Function name: printLines      
+    */
   public static void printLines() {
     System.out.println("I will not copy and paste code.");
     System.out.println("I will use Camel Case when writing class names.");
