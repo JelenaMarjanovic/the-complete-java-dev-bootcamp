@@ -15,11 +15,13 @@ public class CounterTool {
     System.out.print("Pick a number to count to: ");
     int countTo = scan.nextInt();
 
-    System.out.println("\nCounting:");
+    System.out.println("\nCounting: ");
 
     for (int i = countFrom; i <= countTo; i += countBy) {
-      System.out.println(i);
+      System.out.print(i + " ");
     }
+
+    System.out.println();
 
     scan.close();
   }
