@@ -9,10 +9,8 @@ public class RockPaperScissors {
     System.out.println("When I say 'shoot', Choose: rock, paper, or scissors.\n");
     System.out.println("Are you ready? Write 'yes' if you are.");
 
-    // Task 1: See if the user wants to play.
     String ready = scan.nextLine();
 
-    // Task 2: Set up the game
     if (ready.equals("yes")) {
       System.out.println("\nGreat!");
       System.out.println("rock – paper – scissors, shoot!");
@@ -50,7 +48,7 @@ public class RockPaperScissors {
       case 2:
         return "scissors";
       default:
-        return "no choice";
+        return "";
     }
   }
 
