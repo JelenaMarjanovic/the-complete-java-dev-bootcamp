@@ -9,17 +9,17 @@ public class HighScore {
     }
 
     int highScore = 0;
+    int seat = 0;
 
     for (int i = 0; i < scores.length; i++) {
       if (scores[i] > highScore) {
         highScore = scores[i];
+        seat = i;
       }
     }
 
-    /** Task 1 – Find the person with the highest score
-     *   • After obtaining the highest score, print: The highest score is:  <highScore>. Impressive!
-     *   • It's the gentleman in seat: <index>. Give that man a cookie!
-     */
+    System.out.println("\nThe highest score is: " + highScore + ". Impressive!");
+    System.out.println("It's the gentleman in seat: " + seat + ". Give that man a cookie!");
   }
   
   /**
