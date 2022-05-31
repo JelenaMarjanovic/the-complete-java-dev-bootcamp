@@ -1,10 +1,53 @@
 public class Prices {
   public static void main(String[] args) {
-      // Task 1 - Create a 2D array that can store 3 rows and 5 columns of double values.
+    double[][] prices = {
+      {12.99, 8.99, 9.99, 10.49, 11.99},
+      {0.99, 1.99, 2.49, 1.49, 2.99},
+      {8.99, 7.99, 9.49, 9.99, 10.99}
+    };
+    
+    // double[][] prices = new double[3][5];
 
-      // Task 2 - Populate your 2D array with values from the table (see article)
+    // prices[0][0] = 12.99;
+    // prices[0][1] = 8.99;
+    // prices[0][2] = 9.99;
+    // prices[0][3] = 10.49;
+    // prices[0][4] = 11.99;
 
-      // Task 3 - Print the prices for each department. See the article for the expected output.  
+    // prices[1][0] = 0.99;
+    // prices[1][1] = 1.99;
+    // prices[1][2] = 2.49;
+    // prices[1][3] = 1.49;
+    // prices[1][4] = 2.99;
 
+    // prices[2][0] = 8.99;
+    // prices[2][1] = 7.99;
+    // prices[2][2] = 9.49;
+    // prices[2][3] = 9.99;
+    // prices[2][4] = 10.99;
+
+    printPricesByDepartment(prices[0], "Baking");
+    printPricesByDepartment(prices[1], "Beverage");
+    printPricesByDepartment(prices[2], "Cereals");
+  }
+
+  /**
+   * Function name = printPricesByDepartment
+   * @param prices
+   * @param department
+   * 
+   * 1. In function, print one row from 2D array and put department in the beginning of the line
+   */
+  public static void printPricesByDepartment(double[] prices, String department) {
+    if (!(department.equals("Baking") || department.equals("Beverage") || department.equals("Cereals"))) {
+      System.out.println("No such department!");
+      System.exit(0);
+    }
+
+    System.out.print(department + ": ");
+    for (int i = 0; i < prices.length; i++) {
+      System.out.print(prices[i] + " ");
+    }
+    System.out.println();
   }
 }
