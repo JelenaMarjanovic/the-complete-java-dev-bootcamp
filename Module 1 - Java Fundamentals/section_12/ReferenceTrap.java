@@ -18,7 +18,7 @@ public class ReferenceTrap {
   /**
    * Function name - copyStaff
    * @param staff (String[])
-   * @return (String[])
+   * @return      (String[])
    * 
    * 1. Inside the function make a copy of provided array and return it.
    */

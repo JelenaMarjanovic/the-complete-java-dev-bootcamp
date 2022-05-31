@@ -32,11 +32,11 @@ public class Prices {
   }
 
   /**
-   * Function name = printPricesByDepartment
-   * @param prices
-   * @param department
+   * Function name - printPricesByDepartment
+   * @param prices      (double[])
+   * @param department  (String)
    * 
-   * 1. In function, print one row from 2D array and put department in the beginning of the line
+   * In function, print one row from 2D array and put department in the beginning of the line
    */
   public static void printPricesByDepartment(double[] prices, String department) {
     if (!(department.equals("Baking") || department.equals("Beverage") || department.equals("Cereals"))) {
