@@ -26,9 +26,11 @@ public class Prices {
     // prices[2][3] = 9.99;
     // prices[2][4] = 10.99;
 
-    printPricesByDepartment(prices[0], "Baking");
-    printPricesByDepartment(prices[1], "Beverage");
-    printPricesByDepartment(prices[2], "Cereals");
+    // printPricesByDepartment(prices[0], "Baking");
+    // printPricesByDepartment(prices[1], "Beverage");
+    // printPricesByDepartment(prices[2], "Cereals");
+
+    printPrices(prices);
   }
 
   /**
@@ -49,5 +51,37 @@ public class Prices {
       System.out.print(prices[i] + " ");
     }
     System.out.println();
+  }
+
+  /**
+   * Function name - printPrices
+   * @param prices  (double[][])
+   * 
+   * In function, print prices starting with the name of department, line by line
+   */
+  public static void printPrices(double[][] prices) {
+    System.out.println("Prices:");
+
+    for (int i = 0; i < prices.length; i++) {
+      switch (i) {
+        case 0:
+          System.out.print("\tBaking: ");
+          break;
+        case 1:
+          System.out.print("\tBeverage: ");
+          break;
+        case 2:
+          System.out.print("\tCereals: ");
+          break;
+        default:
+          break;
+      }
+
+      for (int j = 0; j < prices[i].length; j++) {
+        System.out.print(prices[i][j] + " ");
+      }
+
+      System.out.println();
+    }
   }
 }
