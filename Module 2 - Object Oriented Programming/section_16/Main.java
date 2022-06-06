@@ -28,14 +28,15 @@ public class Main {
     dodge.setColor("Jet Black");
 
     nissan2.setColor("yellow");
+    nissan2.setParts(new String[] {"tires", "filter"});
 
     nissan.setPrice(nissan.getPrice() / 2);
     dodge.setPrice(dodge.getPrice() / 2);
 
-    String[] outsideVariable = nissan.getParts();
-    outsideVariable[1] = "wheel";
+    // String[] outsideVariable = nissan.getParts();
+    // outsideVariable[1] = "wheel";
 
-    System.out.println("Outside var: " + Arrays.toString(outsideVariable));
+    // System.out.println("Outside var: " + Arrays.toString(outsideVariable));
 
     // dodge.make = "Dodge";
     // dodge.price = 11000;
@@ -51,6 +52,8 @@ public class Main {
     
     System.out.println("Nissan parts: " + Arrays.toString(nissan.getParts()));
     System.out.println("Dodge parts: " + Arrays.toString(dodge.getParts()));
+    System.out.println("Nissan2 parts: " + Arrays.toString(nissan2.getParts()));
+
     // nissan.drive();
     // dodge.drive();
     // nissan2.drive();

@@ -59,6 +59,10 @@ public class Car {
     this.color = color;
   }
 
+  public void setParts(String[] parts) {
+    this.parts = Arrays.copyOf(parts, parts.length);
+  }
+
   public void drive() {
     System.out.println("You bought the beautiful " + this.year + " " + this.color
       + " " + this.make + " for $" + this.price + ".");
