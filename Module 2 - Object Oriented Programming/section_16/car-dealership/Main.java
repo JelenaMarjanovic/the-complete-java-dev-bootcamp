@@ -15,5 +15,11 @@ public class Main {
     }
 
     dealership.sell(2);
+
+    System.out.println("Searching for Nissan with $3000...");
+    System.out.println(dealership.search("Nissan", 3000));
+
+    System.out.println("Searching for Dodge with $10000...");
+    System.out.println(dealership.search("Dodge", 10000));
   }
 }

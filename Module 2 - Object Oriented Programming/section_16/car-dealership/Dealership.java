@@ -17,4 +17,19 @@ public class Dealership {
     this.cars[idx].drive();
     this.cars[idx] = null;
   }
+
+  public String search(String make, int budget) {
+    for (int i = 0; i < cars.length; i++) {
+      Car currentCar = this.cars[i];
+
+      if (currentCar == null) {
+        continue;
+      } else if (currentCar.getMake().equals(make) && currentCar.getPrice() <= budget) {
+        return "\nWe found one in spot " + i + "\n" + currentCar.toString()
+          + "\nAre you interested?\n";
+      }
+    }
+
+    return "\nSorry, we couldn't find any cars.\n";
+  }
 }
