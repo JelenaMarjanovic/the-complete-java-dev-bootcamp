@@ -19,11 +19,15 @@ public class Main {
     Airline airline = new Airline();
 
     for (int i = 0; i < people.length; i++) {
-      airline.setPerson(people[i]);
+      Person currentPerson = people[i];
+
+      if (currentPerson.applyPassport()) {
+        currentPerson.setPassport();
+        airline.createReservation(currentPerson);
+      }
     }
 
-    System.out.println(airline.getPerson(1));
-    System.out.println(airline.getPerson(5));
-    System.out.println(airline.getPerson(10));
+    System.out.println("****************** RESERVATIONS COMPLETE! ******************");
+    System.out.println(airline);
   }
 }
