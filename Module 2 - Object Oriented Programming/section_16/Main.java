@@ -66,5 +66,13 @@ public class Main {
     dealership.setCar(nissan, 0);
     dealership.setCar(dodge, 1);
     dealership.setCar(nissan2, 2);
+
+    Car newCar = dealership.getCar(0);
+    System.out.println("Before a change:\n" + dealership.getCar(0));
+    System.out.println("New car:\n" + newCar);
+
+    newCar.setColor("blue");
+    System.out.println("After a change:\n" + dealership.getCar(0));
+    System.out.println("New car:\n" + newCar);
   }
 }
