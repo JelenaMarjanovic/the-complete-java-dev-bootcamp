@@ -2,7 +2,9 @@ public class Main {
   public static void main(String[] args) {
     Car nissan = new Car("Nissan", 5000, 2020, "red");
     // Car nissan2 = nissan; // Reference trap
-    Car nissan2 = new Car("Nissan", 5000, 2020, "red");
+    // Car nissan2 = new Car("Nissan", 5000, 2020, "red");
+
+    Car nissan2 = new Car(nissan);  // Copy constructor
 
     // nissan.make = "Nissan";
     // nissan.price = 5000;
