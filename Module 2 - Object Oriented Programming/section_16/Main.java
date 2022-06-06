@@ -50,9 +50,13 @@ public class Main {
     // System.out.println("This " + nissan2.getMake() + " is worth $" + nissan2.getPrice() + ". It was built in " + nissan2.getYear()
     //   + ". It is " + nissan2.getColor() + ".\n");
     
-    System.out.println("Nissan parts: " + Arrays.toString(nissan.getParts()));
-    System.out.println("Dodge parts: " + Arrays.toString(dodge.getParts()));
-    System.out.println("Nissan2 parts: " + Arrays.toString(nissan2.getParts()));
+    // System.out.println("Nissan parts: " + Arrays.toString(nissan.getParts()));
+    // System.out.println("Dodge parts: " + Arrays.toString(dodge.getParts()));
+    // System.out.println("Nissan2 parts: " + Arrays.toString(nissan2.getParts()));
+
+    System.out.println(nissan);
+    System.out.println(dodge);
+    System.out.println(nissan2);
 
     // nissan.drive();
     // dodge.drive();

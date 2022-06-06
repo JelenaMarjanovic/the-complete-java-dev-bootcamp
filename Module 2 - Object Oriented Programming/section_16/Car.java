@@ -68,4 +68,12 @@ public class Car {
       + " " + this.make + " for $" + this.price + ".");
     System.out.println("Please, drive your car to the nearest exit.\n");
   }
+
+  public String toString() {
+    return "Make: " + this.make + "\n"
+      + "Price: " + this.price + "\n"
+      + "Year: " + this.year + "\n"
+      + "Color: " + this.color + "\n"
+      + "Parts: " + Arrays.toString(this.parts) + "\n";
+  }
 }
