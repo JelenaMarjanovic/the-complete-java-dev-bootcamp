@@ -37,6 +37,8 @@ public class Main {
     //   + ". It is " + dodge.getColor() + ".\n");
     // System.out.println("This " + nissan2.getMake() + " is worth $" + nissan2.getPrice() + ". It was built in " + nissan2.getYear()
     //   + ". It is " + nissan2.getColor() + ".\n");
+    
+    System.out.println(nissan.parts);
     nissan.drive();
     dodge.drive();
     nissan2.drive();

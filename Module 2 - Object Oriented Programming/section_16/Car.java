@@ -3,6 +3,7 @@ public class Car {
   private double price;
   private int year;
   private String color;
+  String[] parts;
 
   public Car(String make, double price, int year, String color) {
     this.make = make;
