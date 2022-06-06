@@ -21,5 +21,7 @@ public class Main {
 
     System.out.println("Searching for Dodge with $10000...");
     System.out.println(dealership.search("Dodge", 10000));
+
+    System.out.println(dealership);
   }
 }

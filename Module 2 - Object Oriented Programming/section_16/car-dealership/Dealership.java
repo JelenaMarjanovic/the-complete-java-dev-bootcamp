@@ -32,4 +32,22 @@ public class Dealership {
 
     return "\nSorry, we couldn't find any cars.\n";
   }
+
+  public String toString() {
+    String result = "";
+
+    for (int i = 0; i < this.cars.length; i++) {
+      Car currentCar = this.cars[i];
+
+      result += "Parking Spot: " + i + "\n";
+
+      if (currentCar == null) {
+        result += "Empty\n";
+      } else {
+        result += currentCar.toString() + "\n";
+      }
+    }
+    
+    return result;
+  }
 }
