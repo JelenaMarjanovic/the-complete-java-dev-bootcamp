@@ -12,4 +12,9 @@ public class Dealership {
   public void setCar(Car car, int idx) {
     this.cars[idx] = new Car(car);  // avoid reference trap
   }
+
+  public void sell(int idx) {
+    this.cars[idx].drive();
+    this.cars[idx] = null;
+  }
 }
