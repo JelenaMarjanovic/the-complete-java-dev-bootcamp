@@ -10,4 +10,20 @@ public class Car {
     this.year = year;
     this.color = color;
   }
+
+  public String getMake() {
+    return this.make;
+  }
+
+  public double getPrice() {
+    return this.price;
+  }
+
+  public int getYear() {
+    return this.year;
+  }
+
+  public String getColor() {
+    return this.color;
+  }
 }
