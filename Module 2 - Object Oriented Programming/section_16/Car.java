@@ -5,7 +5,7 @@ public class Car {
   private double price;
   private int year;
   private String color;
-  String[] parts;
+  private String[] parts;
 
   public Car(String make, double price, int year, String color, String[] parts) {
     this.make = make;
@@ -37,6 +37,10 @@ public class Car {
 
   public String getColor() {
     return this.color;
+  }
+
+  public String[] getParts() {
+    return Arrays.copyOf(this.parts, this.parts.length); // avoid reference trap
   }
 
   public void setMake(String make) {

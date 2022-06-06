@@ -32,6 +32,11 @@ public class Main {
     nissan.setPrice(nissan.getPrice() / 2);
     dodge.setPrice(dodge.getPrice() / 2);
 
+    String[] outsideVariable = nissan.getParts();
+    outsideVariable[1] = "wheel";
+
+    System.out.println("Outside var: " + Arrays.toString(outsideVariable));
+
     // dodge.make = "Dodge";
     // dodge.price = 11000;
     // dodge.year = 2019;
@@ -44,8 +49,8 @@ public class Main {
     // System.out.println("This " + nissan2.getMake() + " is worth $" + nissan2.getPrice() + ". It was built in " + nissan2.getYear()
     //   + ". It is " + nissan2.getColor() + ".\n");
     
-    System.out.println("Nissan parts: " + Arrays.toString(nissan.parts));
-    System.out.println("Dodge parts: " + Arrays.toString(dodge.parts));
+    System.out.println("Nissan parts: " + Arrays.toString(nissan.getParts()));
+    System.out.println("Dodge parts: " + Arrays.toString(dodge.getParts()));
     // nissan.drive();
     // dodge.drive();
     // nissan2.drive();
