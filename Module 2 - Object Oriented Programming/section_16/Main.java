@@ -1,6 +1,10 @@
+import java.util.Arrays;
+
 public class Main {
   public static void main(String[] args) {
-    Car nissan = new Car("Nissan", 5000, 2020, "red");
+    String[] parts = {"tires", "keys"};
+
+    Car nissan = new Car("Nissan", 5000, 2020, "red", parts);
     // Car nissan2 = nissan; // Reference trap
     // Car nissan2 = new Car("Nissan", 5000, 2020, "red");
 
@@ -16,7 +20,9 @@ public class Main {
     // System.out.println(nissan.year);
     // System.out.println(nissan.color);
 
-    Car dodge = new Car("Dodge", 11000, 2019, "blue");
+    parts[1] = "rim";
+
+    Car dodge = new Car("Dodge", 11000, 2019, "blue", parts);
 
     nissan.setColor("Jet Black");
     dodge.setColor("Jet Black");
@@ -38,9 +44,10 @@ public class Main {
     // System.out.println("This " + nissan2.getMake() + " is worth $" + nissan2.getPrice() + ". It was built in " + nissan2.getYear()
     //   + ". It is " + nissan2.getColor() + ".\n");
     
-    System.out.println(nissan.parts);
-    nissan.drive();
-    dodge.drive();
-    nissan2.drive();
+    System.out.println("Nissan parts: " + Arrays.toString(nissan.parts));
+    System.out.println("Dodge parts: " + Arrays.toString(dodge.parts));
+    // nissan.drive();
+    // dodge.drive();
+    // nissan2.drive();
   }
 }
