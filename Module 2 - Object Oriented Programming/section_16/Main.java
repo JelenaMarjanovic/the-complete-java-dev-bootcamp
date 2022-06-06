@@ -14,6 +14,12 @@ public class Main {
 
     Car dodge = new Car("Dodge", 11000, 2019, "blue");
 
+    nissan.setColor("Jet Black");
+    dodge.setColor("Jet Black");
+
+    nissan.setPrice(nissan.getPrice() / 2);
+    dodge.setPrice(dodge.getPrice() / 2);
+
     // dodge.make = "Dodge";
     // dodge.price = 11000;
     // dodge.year = 2019;
