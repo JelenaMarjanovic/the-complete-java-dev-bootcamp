@@ -54,14 +54,17 @@ public class Main {
     // System.out.println("Dodge parts: " + Arrays.toString(dodge.getParts()));
     // System.out.println("Nissan2 parts: " + Arrays.toString(nissan2.getParts()));
 
-    System.out.println(nissan);
-    System.out.println(dodge);
-    System.out.println(nissan2);
+    // System.out.println(nissan);
+    // System.out.println(dodge);
+    // System.out.println(nissan2);
 
     // nissan.drive();
     // dodge.drive();
     // nissan2.drive();
 
     Dealership dealership = new Dealership();
+    dealership.setCar(nissan, 0);
+    dealership.setCar(dodge, 1);
+    dealership.setCar(nissan2, 2);
   }
 }
