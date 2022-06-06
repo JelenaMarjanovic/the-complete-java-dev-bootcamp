@@ -50,4 +50,31 @@ public class Person {
   public void setSeatNumber(int seatNumber) {
     this.seatNumber = seatNumber;
   }
+
+  /**
+   * Function name: applyPassport
+   * @return (boolean)
+   *
+   * Inside the function:
+   *    1. Returns a random boolean of true or false.
+   */
+  public boolean applyPassport() {
+    double randomNumber = Math.random();
+
+    if (randomNumber >= 0.5) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  /**
+   * Function name: chooseSeat
+   *
+   * Inside the function:
+   *   1. Sets this.seat to a random number between 1 -- 11.
+   */
+  public void chooseSeat() {
+    this.seatNumber = (int)(Math.random() * 11 + 1);
+  }
 }
