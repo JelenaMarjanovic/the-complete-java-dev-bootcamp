@@ -61,5 +61,7 @@ public class Main {
     // nissan.drive();
     // dodge.drive();
     // nissan2.drive();
+
+    Dealership dealership = new Dealership();
   }
 }

@@ -1,3 +1,9 @@
+import java.util.Arrays;
+
 public class Dealership {
-  private Cars[] cars;
+  private Car[] cars;
+
+  public Dealership() {
+    this.cars = new Car[3];
+  }
 }
