@@ -1,7 +1,9 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+
     Car[] cars = new Car[] {
       new Car("Nissan", 5000, 2020, "red", new String[] {"tires", "keys"}),
       new Car("Dodge", 8500, 2019, "blue", new String[] {"tires", "rim"}),
@@ -12,6 +14,30 @@ public class Main {
 
     Dealership dealership = new Dealership(cars);
 
-    System.out.println(dealership);    
+    System.out.println("\n ****** JAVA DEALERSHIP! ****** \n");
+    System.out.print("Welcome! Enter the type of car you're looking for: ");
+    String make = scan.nextLine();
+
+    System.out.print("Enter your budget: ");
+    int budget = scan.nextInt();
+
+    int idx = dealership.search(make, budget);
+
+    switch (idx) {
+      case 404:
+        System.out.println("Feel free to browse through our collection of cars.\n");
+        System.out.println(dealership);
+        break;    
+      default:
+        scan.nextLine();
+        String decision = scan.nextLine();
+
+        if (decision.equalsIgnoreCase("yes")) {
+          dealership.sell(idx);
+        }
+        break;
+    }
+
+    scan.close();
   }
 }
