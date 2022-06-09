@@ -1,3 +1,5 @@
+package debugging;
+
 public class Breakpoints {
   public static void main(String[] args) {
     int number = 5;

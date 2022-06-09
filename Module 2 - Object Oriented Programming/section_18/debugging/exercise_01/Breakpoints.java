@@ -1,4 +1,4 @@
-package exercise_01;
+package debugging.exercise_01;
 
 public class Breakpoints {
   public static void main(String[] args) {
